@@ -1,0 +1,144 @@
+/* Variables */
+$mutable-color: #e57373;
+$immutable-color: #64b5f6;
+$other-color: #ffd54f;
+$text-color: #333;
+$background-color: #f9f9f9;
+
+/* Global Styles */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	background-color: $background-color;
+	color: $text-color;
+	line-height: 1.6;
+}
+
+header {
+	background: $immutable-color;
+	color: white;
+	text-align: center;
+	padding: 1rem;
+}
+
+.introduction {
+	text-align: center;
+	padding: 1rem;
+	background: $background-color;
+}
+
+h2 {
+	text-align: center;
+}
+.methods-category {
+	margin: 2rem;
+
+	&.mutable {
+		h2 {
+			color: $mutable-color;
+		}
+	}
+	&.immutable {
+		h2 {
+			color: $immutable-color;
+		}
+	}
+	&.other {
+		h2 {
+			color: $other-color;
+		}
+	}
+
+	.method-card {
+		background: white;
+		border: 1px solid #ddd;
+		border-radius: 8px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		padding: 1.5rem;
+		margin: 1rem auto;
+		max-width: 600px;
+
+		h3 {
+			color: $immutable-color;
+		}
+		pre {
+			background: #f4f4f4;
+			padding: 1rem;
+			border-radius: 5px;
+			font-family: 'Courier New', monospace;
+		}
+	}
+}
+
+footer {
+	background: $text-color;
+	color: white;
+	text-align: center;
+	padding: 1rem;
+
+	a {
+		color: $immutable-color;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+// Responsive Styles
+@media (max-width: 768px) {
+	header {
+		padding: 16px;
+		font-size: 24px;
+	}
+
+	.introduction {
+		padding: 16px;
+		font-size: 14px;
+	}
+
+	.methods-category {
+		margin: 16px;
+
+		.method-card {
+			margin: 16px auto;
+			padding: 16px;
+			font-size: 14px;
+
+			pre {
+				font-size: 12px;
+				padding: 12px;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	header {
+		padding: 12px;
+		font-size: 20px;
+	}
+
+	.introduction {
+		padding: 12px;
+		font-size: 12px;
+	}
+
+	.methods-category {
+		margin: 8px;
+
+		.method-card {
+			margin: 8px auto;
+			padding: 12px;
+			font-size: 12px;
+
+			pre {
+				font-size: 10px;
+				padding: 8px;
+			}
+		}
+	}
+
+	footer {
+		font-size: 12px;
+	}
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript Array Methods</title>
+	<link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body>
+	<header>
+		<h1>Master JavaScript Array Methods</h1>
+	</header>
+	<main>
+		<section class="introduction">
+			<p>Explore 12 essential JavaScript array methods. These methods are grouped as **mutable**, **immutable**, and
+				**other methods** to enhance your understanding of how they manipulate arrays.</p>
+		</section>
+
+		<!-- Mutable Methods Section -->
+		<section class="methods-category mutable">
+			<h2>Mutable Methods</h2>
+
+			<div class="method-card">
+				<h3>.push()</h3>
+				<p>Adds elements to the end of an array.</p>
+				<pre>
+let arr = [1, 2];
+arr.push(3);
+console.log(arr); // [1, 2, 3]
+        </pre>
+			</div>
+
+			<div class="method-card">
+				<h3>.pop()</h3>
+				<p>Removes the last element from an array.</p>
+				<pre>
+let arr = [1, 2, 3];
+arr.pop();
+console.log(arr); // [1, 2]
+        </pre>
+			</div>
+
+			<div class="method-card">
+				<h3>.splice()</h3>
+				<p>Removes or replaces elements at a specific index.</p>
+				<pre>
+let arr = [1, 2, 3];
+arr.splice(1, 1, 99);
+console.log(arr); // [1, 99, 3]
+        </pre>
+			</div>
+
+			<div class="method-card">
+				<h3>.shift()</h3>
+				<p>Removes the first element from an array.</p>
+				<pre>
+let arr = [1, 2, 3];
+arr.shift();
+console.log(arr); // [2, 3]
+        </pre>
+			</div>
+
+			<div class="method-card">
+				<h3>.unshift()</h3>
+				<p>Adds elements to the beginning of an array.</p>
+				<pre>
+let arr = [2, 3];
+arr.unshift(1);
+console.log(arr); // [1, 2, 3]
+        </pre>
+			</div>
+		</section>
+
+		<!-- Immutable Methods Section -->
+		<section class="methods-category immutable">
+			<h2>Immutable Methods</h2>
+
+			<div class="method-card">
+				<h3>.map()</h3>
+				<p>Creates a new array by applying a function to each element.</p>
+				<pre>
+let nums = [1, 2, 3];
+let squared = nums.map(x => x * x);
+console.log(squared); // [1, 4, 9]
+        </pre>
+			</div>
+
+			<div class="method-card">
+				<h3>.filter()</h3>
+				<p>Creates a new array with elements that pass a test.</p>
+				<pre>
+let nums = [1, 2, 3];
+let even = nums.filter(x => x % 2 === 0);
+console.log(even); // [2]
+        </pre>
+			</div>
+
+			<div class="method-card">
+				<h3>.reduce()</h3>
+				<p>Reduces an array to a single value by applying a function.</p>
+				<pre>
+let nums = [1, 2, 3];
+let sum = nums.reduce((acc, curr) => acc + curr, 0);
+console.log(sum); // 6
+        </pre>
+			</div>
+
+			<div class="method-card">
+				<h3>.slice()</h3>
+				<p>Returns a shallow copy of a portion of an array.</p>
+				<pre>
+let arr = [1, 2, 3];
+let part = arr.slice(1, 3);
+console.log(part); // [2, 3]
+        </pre>
+			</div>
+		</section>
+
+
+		<section class="methods-category other">
+			<h2>Other Methods</h2>
+
+			<div class="method-card">
+				<h3>.find()</h3>
+				<p>Finds the first element that satisfies a condition.</p>
+				<pre>
+let nums = [1, 2, 3];
+let found = nums.find(x => x > 1);
+console.log(found); // 2
+        </pre>
+			</div>
+
+			<div class="method-card">
+				<h3>.findIndex()</h3>
+				<p>Finds the index of the first element that satisfies a condition.</p>
+				<pre>
+let nums = [1, 2, 3];
+let index = nums.findIndex(x => x > 1);
+console.log(index); // 1
+        </pre>
+			</div>
+
+			<div class="method-card">
+				<h3>.includes()</h3>
+				<p>Checks if an array contains a specific value.</p>
+				<pre>
+let arr = [1, 2, 3];
+console.log(arr.includes(2)); // true
+        </pre>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<p>Resources: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">MDN
+				Array Docs</a></p>
+		<p>Made by <a href="https://github.com/javasharipov">javasharipov</a></p>
+	</footer>
+</body>
+
+</html>
